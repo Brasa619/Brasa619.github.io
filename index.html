@@ -6,7 +6,8 @@ title: Pagetitle!
 <p>This is the index page.</p>
 <p><a href="kittens.html">To the kittens!!1!</a></p>
 
-<blockquote>
-    <p>And here I stand, with all my lore,<br />
-    Poor fool, no wiser than before.</p>
-</blockquote>
+<ul>
+    {% for post in site.posts %}
+        <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+    <% endfor %>
+</ul>
